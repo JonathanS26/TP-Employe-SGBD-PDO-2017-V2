@@ -1,0 +1,27 @@
+
+
+Explication sur les requetes SQL en PHP
+
+//SQL
+requete d'insertion :
+insert into employe(matricule, nom, prenom) values (12, 'aa', 'bb');
+
+
+//PHP
+$requete="insert into employe(matricule, nom, prenom)".
+          " values ( 12 , 'aa', 'bb');";
+
+$requete="insert into employe(matricule, nom, prenom)".
+          " values ( $mat , '$nom', '$pre');";
+
+$requete="insert into employe(matricule, nom, prenom)".
+          " values ( ".$mat."" , '".$nom."', '".$pre."');";
+
+
+$requete="insert into employe"
+   ."(matricule, nom, prenom) values ("
+   .$mat.",'"
+   .$nom."','"
+   .$pre."');";
+      
+
